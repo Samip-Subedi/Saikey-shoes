@@ -188,7 +188,6 @@ exports.getSingleProductReviews = catchAsyncErrors(async(req, res, next) => {
         reviews: product.reviews,
     });
 });
-//delete review in admin
 // delete review -- admin
 exports.deleteProductReview = catchAsyncErrors(async(req, res, next) => {
     const product = await Product.findById(req.query.productId);
