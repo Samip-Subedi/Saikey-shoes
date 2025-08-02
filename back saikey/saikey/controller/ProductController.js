@@ -102,7 +102,7 @@ exports.updateProduct = catchAsyncErrors(async(req, res, next) => {
         product,
     });
 });
-
+// delete product --admin
 //delete product --admin
 exports.deleteProduct = catchAsyncErrors(async(req, res, next) => {
     const product = await Product.findById(req.params.id);
