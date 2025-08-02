@@ -3,7 +3,7 @@ const ErrorHandler = require("../utils/ErrorHandler.js");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const Product = require("../models/productModel.js");
 
-// create Order
+// create Order 
 exports.createOrder = catchAsyncErrors(async (req, res, next) => {
   const {
     shippingInfo,
@@ -39,7 +39,7 @@ exports.getSingleOrder = catchAsyncErrors(async (req, res, next) => {
     "user",
     "name email"
   );
-
+// if else case for item order for managing error
   if (!order) {
     return next(new ErrorHandler("Items Ordered not found from this id", 404));
   };
@@ -50,7 +50,7 @@ exports.getSingleOrder = catchAsyncErrors(async (req, res, next) => {
   });
 }
 );
-
+// all order fetched here 
 // get all orders
 exports.getAllOrders = catchAsyncErrors(async (req, res, next) => {
   const orders = await Order.find({user: req.user._id});
