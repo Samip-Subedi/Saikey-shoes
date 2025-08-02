@@ -121,6 +121,7 @@ exports.deleteProduct = catchAsyncErrors(async(req, res, next) => {
         message: "Product is deleted successfully",
     });
 });
+//single product details
 //single product details --admin
 exports.getSingleProduct = catchAsyncErrors(async(req, res, next) => {
     const product = await Product.findById(req.params.id);
