@@ -134,7 +134,6 @@ exports.getSingleProduct = catchAsyncErrors(async(req, res, next) => {
     });
 });
 // create and update review
-//create and update 
 exports.createProductReview = catchAsyncErrors(async(req, res, next) => {
     console.log(req.body);
     const { rating, comment, productId } = req.body;
