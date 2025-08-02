@@ -60,7 +60,7 @@ exports.getAllOrders = catchAsyncErrors(async (req, res, next) => {
     orders,
   });
 });
-
+// admin orders 
 // get all orders =======admin only
 exports.getAllOrdersAdmin = catchAsyncErrors(async (req, res, next) => {
   const orders = await Order.find();
