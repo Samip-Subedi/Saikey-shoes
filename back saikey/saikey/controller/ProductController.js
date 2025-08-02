@@ -5,6 +5,7 @@ const Features = require("../utils/Features.js");
 const cloudinary = require("cloudinary");
 
 // create Product --admin
+// admin products create
 exports.createProduct = catchAsyncErrors(async(req, res, next) => {
     let images = [];
 
@@ -36,7 +37,6 @@ exports.createProduct = catchAsyncErrors(async(req, res, next) => {
         product,
     });
 });
-// all product fetched
 // get all products
 exports.getAllProducts = catchAsyncErrors(async(req, res) => {
     const resultPerPage = 8;
@@ -56,7 +56,6 @@ exports.getAllProducts = catchAsyncErrors(async(req, res) => {
         productsCount,
     });
 });
-// update product --admin
 //update product --admin
 exports.updateProduct = catchAsyncErrors(async(req, res, next) => {
     let product = await Product.findById(req.params.id);
