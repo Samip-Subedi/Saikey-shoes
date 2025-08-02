@@ -120,7 +120,7 @@ exports.deleteProduct = catchAsyncErrors(async(req, res, next) => {
         message: "Product is deleted successfully",
     });
 });
-
+// solo product details -- in admin
 //single product details --admin
 exports.getSingleProduct = catchAsyncErrors(async(req, res, next) => {
     const product = await Product.findById(req.params.id);
@@ -132,7 +132,7 @@ exports.getSingleProduct = catchAsyncErrors(async(req, res, next) => {
         product,
     });
 });
-
+// product create and update
 // create and update review
 exports.createProductReview = catchAsyncErrors(async(req, res, next) => {
     console.log(req.body);
