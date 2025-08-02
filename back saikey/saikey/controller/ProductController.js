@@ -177,7 +177,6 @@ exports.createProductReview = catchAsyncErrors(async(req, res, next) => {
     });
 });
 // get all reviews of single product
-//get all review on single page 
 exports.getSingleProductReviews = catchAsyncErrors(async(req, res, next) => {
     const product = await Product.findById(req.query.id);
     if (!product) {
