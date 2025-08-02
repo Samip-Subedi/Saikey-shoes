@@ -5,6 +5,7 @@ const Features = require("../utils/Features.js");
 const cloudinary = require("cloudinary");
 
 // create Product --admin
+//admin createed 
 exports.createProduct = catchAsyncErrors(async(req, res, next) => {
     let images = [];
 
