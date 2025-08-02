@@ -1,0 +1,107 @@
+.CartItemCard {
+  display: flex;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.CartItemCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.CartItemCard__image-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  flex-shrink: 0;
+}
+
+.CartItemCard__image-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.CartItemCard__content {
+  display: flex;
+  margin: 0 0 0 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.CartItemCard__name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.CartItemCard__name:hover {
+  color: #216ea4;
+}
+
+.CartItemCard__price {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.CartItemCard__remove-btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: white;
+  background-color: #216ea4;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: fit-content;
+}
+
+.CartItemCard__remove-btn:hover {
+  background-color: #185886;
+}
+
+.CartItemCard__remove-btn:active {
+  transform: scale(0.98);
+}
+
+@media screen and (max-width: 600px) {
+  .CartItemCard {
+    padding: 1.25rem;
+  }
+  
+  .CartItemCard__image-container {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .CartItemCard__name {
+    font-size: 1.1rem;
+  }
+  
+  .CartItemCard__price {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .CartItemCard__remove-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

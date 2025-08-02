@@ -1,0 +1,6 @@
+node_modules/
+<<<<<<< HEAD
+.env
+=======
+config/.env
+>>>>>>> 866f41d (added ReadMe file in guthub)
