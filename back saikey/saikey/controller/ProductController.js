@@ -58,7 +58,6 @@ exports.getAllProducts = catchAsyncErrors(async(req, res) => {
     });
 });
 //update product --admin
-//update product 
 exports.updateProduct = catchAsyncErrors(async(req, res, next) => {
     let product = await Product.findById(req.params.id);
     if (!product) {
