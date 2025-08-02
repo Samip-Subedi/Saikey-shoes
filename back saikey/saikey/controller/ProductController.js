@@ -132,7 +132,6 @@ exports.getSingleProduct = catchAsyncErrors(async(req, res, next) => {
         product,
     });
 });
-// product create and update
 // create and update review
 exports.createProductReview = catchAsyncErrors(async(req, res, next) => {
     console.log(req.body);
